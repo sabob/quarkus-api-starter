@@ -1,0 +1,6 @@
+### Event search###
+GET {{base-url}}/v1/events
+
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{bearer}}
