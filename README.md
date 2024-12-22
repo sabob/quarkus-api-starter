@@ -1,22 +1,57 @@
-# Intro
+# Quarkus Multi-Module Starter App
 
-## Start
-Before running/debugging the app ensure you install all dependencies with:
+## Introduction
 
-```mvn install -DskipTests ```
+This project serves as a starter template for a Quarkus-based multi-module Maven application. It provides a clean structure to organize your code into reusable modules and ensures compatibility with Quarkus features.
 
-To run:
+---
 
-```mvn quarkus:dev```
+## Getting Started
 
-To debug use your IDE debugger or from terminal: (remember to attach your debugger on port 5005)
-```mvn quarkus:dev -Ddebug```
+### Install Dependencies
 
+Before running or debugging the application, install all dependencies with:
 
-#  Tests
-## Unit
-## Integration
-## k6
-### Only required if you want to run the k6 performance and  e2e tests
-First, you need to install k6 for your OS. Check the k6 docs. 
+`mvn install -DskipTests`
 
+### Running the Application
+
+To start the application in development mode:
+
+`mvn quarkus:dev`
+
+### Debugging
+
+For debugging, you can use your IDE debugger or attach to the Quarkus debug port (5005). From the terminal, start with:
+
+`mvn quarkus:dev -Ddebug`
+
+Then attach your debugger to port `5005`.
+
+---
+
+## Testing
+
+### Unit Tests
+
+Run unit tests for the application with:
+
+`mvn test`
+
+### Integration Tests
+
+Integration tests can be executed with:
+
+`mvn verify`
+
+---
+
+## Formatting
+
+Run the formatter before checking in code:
+
+`mvn formatter:format`
+
+---
+
+This starter project is ready to be extended with more modules and features!
