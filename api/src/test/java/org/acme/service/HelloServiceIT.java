@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 @QuarkusTest
-public class HelloServiceIT {
+public class HelloServiceIT{
 
     public HelloServiceIT() {
         System.out.println(
@@ -19,14 +19,14 @@ public class HelloServiceIT {
     HelloService helloService;
 
     @BeforeEach
-    public void setup() {
+    public void setup(){
         // Setup logic (if any) goes here
     }
 
     @Test
-    public void testHello() {
+    public void testHello(){
         String response = helloService.hello();
-        Assertions.assertNotNull(response, "Response should not be null");
-        Assertions.assertFalse(response.isEmpty(), "Response should not be empty");
+        Assertions.assertNotNull(response,"Response should not be null");
+        Assertions.assertFalse(response.isEmpty(),"Response should not be empty");
     }
 }

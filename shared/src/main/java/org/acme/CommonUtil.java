@@ -1,8 +1,8 @@
 package org.acme;
 
-public class CommonUtil {
+public class CommonUtil{
 
-    public static String reverseString(String input) {
+    public static String reverseString(String input){
         if (input == null) {
             return null;
         }

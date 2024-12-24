@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class HelloClientTest {
+public class HelloClientTest{
 
     public HelloClientTest() {
         System.out.println(String.format("-------------------------- %s Unit Test ---------------------------------",
@@ -14,12 +14,12 @@ public class HelloClientTest {
     HelloClient helloClient;
 
     @BeforeEach
-    public void setup() {
+    public void setup(){
         helloClient = new HelloClient();
     }
 
     @Test
-    public void testHello() {
+    public void testHello(){
         String response = helloClient.getHello();
         Assertions.assertTrue(response.length() > 0);
     }
