@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 @QuarkusTest
-public class HelloClientIT{
+public class HelloClientIT {
 
     public HelloClientIT() {
         System.out.println(
@@ -19,11 +19,11 @@ public class HelloClientIT{
     HelloClient helloClient;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
     }
 
     @Test
-    public void testHello(){
+    public void testHello() {
         String response = helloClient.getHello();
         Assertions.assertTrue(response.length() > 0);
     }
