@@ -21,9 +21,13 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.16.1</quarkus.platform.version>
+        <quarkus.platform.version>3.17.5</quarkus.platform.version>
         <surefire-plugin.version>3.5.1</surefire-plugin.version>
         <eclipse.formatter.version>2.24.1</eclipse.formatter.version>
+
+        <!-- When upgrading quarkus, adjust the mockito version to match quarkus mockito version -->
+        <mockito.version>5.14.2</mockito.version>
+
         <test.port>8281</test.port>
 
         <!--suppress UnresolvedMavenProperty -->
@@ -85,6 +89,12 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${surefire-plugin.version}</version>
                     <configuration>
+                        <!-- The below argLine is required to suppress warning from Mockito. See https://github.com/quarkusio/quarkus/issues/44446
+                        This should be resolved in a future release of Quarkus -->
+                        <argLine>
+                            -javaagent:${settings.localRepository}/org/mockito/mockito-core/${mockito.version}/mockito-core-${mockito.version}.jar
+                        </argLine>
+
                         <systemPropertyVariables>
                             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         </systemPropertyVariables>
