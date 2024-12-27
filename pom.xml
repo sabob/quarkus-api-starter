@@ -23,7 +23,7 @@
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.17.5</quarkus.platform.version>
         <surefire-plugin.version>3.5.1</surefire-plugin.version>
-        <eclipse.formatter.version>2.24.1</eclipse.formatter.version>
+        <formatter-plugin.version>2.24.1</formatter-plugin.version>
 
         <!-- When upgrading quarkus, adjust the mockito version to match quarkus mockito version -->
         <mockito.version>5.14.2</mockito.version>
@@ -40,7 +40,7 @@
                 <plugin>
                     <groupId>net.revelc.code.formatter</groupId>
                     <artifactId>formatter-maven-plugin</artifactId>
-                    <version>${eclipse.formatter.version}</version>
+                    <version>${formatter-plugin.version}</version>
                     <executions>
                         <execution>
                             <goals>
