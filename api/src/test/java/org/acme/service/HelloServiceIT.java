@@ -11,8 +11,12 @@ public class HelloServiceIT {
 
     public HelloServiceIT() {
         System.out.println(
-                String.format("=========================== %s Integration Test (IT) ================================",
-                        this.getClass().getSimpleName()));
+                String.format(
+                        "=========================== %s Integration Test (IT) ================================",
+                        this.getClass()
+                                .getSimpleName()
+                )
+        );
     }
 
     @Inject
@@ -26,7 +30,14 @@ public class HelloServiceIT {
     @Test
     public void testHello() {
         String response = helloService.hello();
-        Assertions.assertNotNull(response, "Response should not be null");
-        Assertions.assertFalse(response.isEmpty(), "Response should not be empty");
+        Assertions.assertNotNull(
+                response,
+                "Response should not be null"
+        );
+        Assertions.assertFalse(
+                response.isEmpty(),
+                "Response should not be empty"
+        );
     }
+
 }

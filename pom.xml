@@ -35,31 +35,36 @@
     </properties>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>net.revelc.code.formatter</groupId>
+                <artifactId>formatter-maven-plugin</artifactId>
+                <version>${formatter-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <lineEnding>KEEP</lineEnding>
+                    <configFile>formatter.xml</configFile>
+                </configuration>
+                <dependencies>
+
+                    <!-- Declare dependency on build-tools which contains the formatter.xml -->
+                    <dependency>
+                        <groupId>org.acme</groupId>
+                        <artifactId>build-tools</artifactId>
+                        <version>${project.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>net.revelc.code.formatter</groupId>
-                    <artifactId>formatter-maven-plugin</artifactId>
-                    <version>${formatter-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>format</goal>
-                            </goals>
-                            <configuration>
-                                <lineEnding>KEEP</lineEnding>
-                                <configFile>formatter.xml</configFile>
-                            </configuration>
-                        </execution>
-                    </executions>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.acme</groupId>
-                            <artifactId>build-tools</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
                 <plugin>
                     <groupId>${quarkus.platform.group-id}</groupId>
                     <artifactId>quarkus-maven-plugin</artifactId>

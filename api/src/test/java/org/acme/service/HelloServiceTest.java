@@ -7,8 +7,13 @@ import org.junit.jupiter.api.Test;
 public class HelloServiceTest {
 
     public HelloServiceTest() {
-        System.out.println(String.format("-------------------------- %s Unit Test ---------------------------------",
-                this.getClass().getSimpleName()));
+        System.out.println(
+                String.format(
+                        "-------------------------- %s Unit Test ---------------------------------",
+                        this.getClass()
+                                .getSimpleName()
+                )
+        );
     }
 
     HelloService helloService;
@@ -23,4 +28,5 @@ public class HelloServiceTest {
         String response = helloService.hello();
         Assertions.assertTrue(response.length() > 0);
     }
+
 }

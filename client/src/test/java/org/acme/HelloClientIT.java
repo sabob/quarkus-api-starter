@@ -11,20 +11,24 @@ public class HelloClientIT {
 
     public HelloClientIT() {
         System.out.println(
-                String.format("=========================== %s Integration Test (IT) ================================",
-                        this.getClass().getSimpleName()));
+                String.format(
+                        "=========================== %s Integration Test (IT) ================================",
+                        this.getClass()
+                                .getSimpleName()
+                )
+        );
     }
 
     @Inject
     HelloClient helloClient;
 
     @BeforeEach
-    public void setup() {
-    }
+    public void setup() {}
 
     @Test
     public void testHello() {
         String response = helloClient.getHello();
         Assertions.assertTrue(response.length() > 0);
     }
+
 }
