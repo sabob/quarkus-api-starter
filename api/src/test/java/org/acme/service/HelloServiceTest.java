@@ -9,8 +9,7 @@ public class HelloServiceTest {
     public HelloServiceTest() {
         System.out.println(
                 String.format(
-                        "-------------------------- %s Unit Test ---------------------------------",
-                        this.getClass()
+                        "-------------------------- %s Unit Test ---------------------------------", this.getClass()
                                 .getSimpleName()
                 )
         );

@@ -15,6 +15,9 @@
     </modules>
 
     <properties>
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <compiler-plugin.version>3.13.0</compiler-plugin.version>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,36 +38,33 @@
     </properties>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>net.revelc.code.formatter</groupId>
-                <artifactId>formatter-maven-plugin</artifactId>
-                <version>${formatter-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>format</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <lineEnding>KEEP</lineEnding>
-                    <configFile>formatter.xml</configFile>
-                </configuration>
-                <dependencies>
-
-                    <!-- Declare dependency on build-tools which contains the formatter.xml -->
-                    <dependency>
-                        <groupId>org.acme</groupId>
-                        <artifactId>build-tools</artifactId>
-                        <version>${project.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>net.revelc.code.formatter</groupId>
+                    <artifactId>formatter-maven-plugin</artifactId>
+                    <version>${formatter-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>format</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <lineEnding>KEEP</lineEnding>
+                        <configFile>formatter.xml</configFile>
+                    </configuration>
+                    <dependencies>
+
+                        <!-- Declare dependency on build-tools which contains the formatter.xml -->
+                        <dependency>
+                            <groupId>org.acme</groupId>
+                            <artifactId>build-tools</artifactId>
+                            <version>${project.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
                 <plugin>
                     <groupId>${quarkus.platform.group-id}</groupId>
                     <artifactId>quarkus-maven-plugin</artifactId>
@@ -150,12 +150,6 @@
             <dependency>
                 <groupId>org.acme</groupId>
                 <artifactId>shared</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.acme</groupId>
-                <artifactId>build-tools</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

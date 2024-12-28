@@ -30,14 +30,8 @@ public class HelloServiceIT {
     @Test
     public void testHello() {
         String response = helloService.hello();
-        Assertions.assertNotNull(
-                response,
-                "Response should not be null"
-        );
-        Assertions.assertFalse(
-                response.isEmpty(),
-                "Response should not be empty"
-        );
+        Assertions.assertNotNull(response, "Response should not be null");
+        Assertions.assertFalse(response.isEmpty(), "Response should not be empty");
     }
 
 }
