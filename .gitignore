@@ -45,3 +45,6 @@ nb-configuration.xml
 .certs/
 
 http-client.env.json
+
+application-dev.properties
+config.properties
