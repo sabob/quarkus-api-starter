@@ -27,6 +27,8 @@
         <quarkus.platform.version>3.17.5</quarkus.platform.version>
         <surefire-plugin.version>3.5.1</surefire-plugin.version>
         <formatter-plugin.version>2.24.1</formatter-plugin.version>
+        <jandex.plugin.version>3.2.3</jandex.plugin.version>
+
 
         <!-- When upgrading quarkus, adjust the mockito version to match quarkus mockito version -->
         <mockito.version>5.14.2</mockito.version>
@@ -40,6 +42,20 @@
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>io.smallrye</groupId>
+                    <artifactId>jandex-maven-plugin</artifactId>
+                    <version>${jandex.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>make-index</id>
+                            <goals>
+                                <goal>jandex</goal>
+                            </goals>
+                            <phase>compile</phase>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>net.revelc.code.formatter</groupId>
                     <artifactId>formatter-maven-plugin</artifactId>

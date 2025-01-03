@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.shared;
 
 public class CommonUtil {
 

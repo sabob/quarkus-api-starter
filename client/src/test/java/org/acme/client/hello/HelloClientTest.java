@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.client.hello;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

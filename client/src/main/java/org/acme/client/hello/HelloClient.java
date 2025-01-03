@@ -1,6 +1,7 @@
-package org.acme;
+package org.acme.client.hello;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import org.acme.shared.CommonUtil;
 
 import java.util.HashMap;
 import java.util.Map;

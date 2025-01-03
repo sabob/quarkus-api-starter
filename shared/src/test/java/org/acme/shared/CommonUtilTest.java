@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.shared;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
