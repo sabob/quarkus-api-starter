@@ -1,4 +1,4 @@
-package org.acme.service;
+package org.quarter.quarter;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

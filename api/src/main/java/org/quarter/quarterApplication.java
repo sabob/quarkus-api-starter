@@ -1,8 +1,8 @@
-package org.acme;
+package org.quarter;
 
 import io.quarkus.runtime.Startup;
 
-public class AcmeApplication {
+public class quarterApplication {
 
     @Startup
     public void init() {

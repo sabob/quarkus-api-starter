@@ -1,4 +1,4 @@
-package org.acme.config;
+package org.quarter.config;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;

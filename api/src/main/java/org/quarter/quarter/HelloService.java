@@ -1,9 +1,9 @@
-package org.acme.service;
+package org.quarter.quarter;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import org.acme.shared.CommonUtil;
-import org.acme.client.hello.HelloClient;
+import org.quarter.shared.CommonUtil;
+import org.quarter.client.hello.HelloClient;
 
 @ApplicationScoped
 public class HelloService {

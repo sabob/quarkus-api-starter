@@ -1,26 +1,29 @@
-package org.acme.client.hello;
+package org.quarter.client.hello;
 
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class HelloClientTest {
+@QuarkusTest
+public class HelloClientIT {
 
-    public HelloClientTest() {
+    public HelloClientIT() {
         System.out.println(
                 String.format(
-                        "-------------------------- %s Unit Test ---------------------------------", this.getClass()
+                        "=========================== %s Integration Test (IT) ================================",
+                        this.getClass()
                                 .getSimpleName()
                 )
         );
     }
 
+    @Inject
     HelloClient helloClient;
 
     @BeforeEach
-    public void setup() {
-        helloClient = new HelloClient();
-    }
+    public void setup() {}
 
     @Test
     public void testHello() {

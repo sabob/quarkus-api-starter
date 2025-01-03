@@ -1,4 +1,4 @@
-package org.acme.shared;
+package org.quarter.shared;
 
 public class CommonUtil {
 

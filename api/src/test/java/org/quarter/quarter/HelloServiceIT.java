@@ -1,4 +1,4 @@
-package org.acme.service;
+package org.quarter.quarter;
 
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
