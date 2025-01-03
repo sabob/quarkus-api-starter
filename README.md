@@ -57,4 +57,10 @@ Run the formatter before checking in code:
 
 ---
 
+## CDI Bean discovery
+For Quarkus to discover CDI Beans in modules, those modules must include either a beans.xml under the folder
+src/main/resources/META-INF/beans.xml or add the _jandex_ plugin.
+
+See the _client_ module as an example.
+
 This starter project is ready to be extended with more modules and features!
