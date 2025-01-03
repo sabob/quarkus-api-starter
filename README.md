@@ -61,6 +61,10 @@ Run the formatter before checking in code:
 For Quarkus to discover CDI Beans in modules, those modules must include either a beans.xml under the folder
 src/main/resources/META-INF/beans.xml or add the _jandex_ plugin.
 
+The jandex plugin builds an index of classes which allows Quarkus to startup quicker.
+This index is built during the maven _compile_ phase so you need to run
+`mvn compile` to create it.
+
 See the _client_ module as an example.
 
 This starter project is ready to be extended with more modules and features!
