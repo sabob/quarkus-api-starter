@@ -1,10 +1,12 @@
 package org.acme;
 
-import jakarta.ws.rs.ApplicationPath;
-import jakarta.ws.rs.core.Application;
+import io.quarkus.runtime.Startup;
 
-// Configures the global path for REST requests
-@ApplicationPath("/api")
-public class AcmeApplication extends Application {
-    // This class can be empty or configure specific JAX-RS features
+public class AcmeApplication {
+
+    @Startup
+    public void init() {
+        System.out.println("App has started");
+    }
+
 }
